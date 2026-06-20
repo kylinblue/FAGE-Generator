@@ -1,0 +1,49 @@
+# Development Docker Compose with separate frontend and backend ports
+services:
+  # Backend API Service
+  backend:
+    build:
+      context: ./backend
+      dockerfile: ../Dockerfile.backend
+    container_name: fage-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - RELOAD=true
+      - LOG_LEVEL=DEBUG
+      - CORS_ORIGINS=["http://localhost:5173","http://localhost:3000"]
+    volumes:
+      - ./backend:/app/backend
+      - backend-data:/app/backend/storage/characters
+    networks:
+      - fage-network
+    restart: unless-stopped
+
+  # Frontend Development Server
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ../Dockerfile.frontend.dev
+    container_name: fage-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - fage-network
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+networks:
+  fage-network:
+    driver: bridge
+
+volumes:
+  backend-data:
+    driver: local

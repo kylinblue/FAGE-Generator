@@ -1,0 +1,156 @@
+# FAGE Character Generator - Git Ignore File
+reference/
+Generator.py Notes.pdf
+Generator.py Notes - 2.pdf
+
+CLAUDE.md
+nul
+
+# =============================================================================
+# Python / Backend
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+backend/venv/
+backend/env/
+backend/.venv
+backend/ENV/
+venv/
+env/
+.venv/
+ENV/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+backend/.env
+
+# Python package management
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg-info/
+dist/
+build/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# =============================================================================
+# Node.js / Frontend
+# =============================================================================
+node_modules/
+frontend/node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build outputs
+frontend/dist/
+frontend/.cache/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# =============================================================================
+# Application-Specific
+# =============================================================================
+
+# Generated PDFs (temporary files)
+backend/generated_pdfs/*.pdf
+!backend/generated_pdfs/.gitkeep
+
+# Character data (user-generated content)
+backend/storage/characters/*.json
+!backend/storage/characters/.gitkeep
+
+# Logs
+*.log
+logs/
+!logs/.gitkeep
+
+# =============================================================================
+# OS-Specific
+# =============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# =============================================================================
+# Development & Temporary
+# =============================================================================
+
+# Old project files
+.old-project-files/
+
+# Claude artifacts
+.claude/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# =============================================================================
+# Docker (keep Dockerfile and docker-compose.yml)
+# =============================================================================
+# Uncomment if you don't want to track docker volumes
+# docker-compose.override.yml
+
+# =============================================================================
+# Database (if added in future)
+# =============================================================================
+*.db
+*.sqlite
+*.sqlite3
+
+# =============================================================================
+# Secrets & Credentials
+# =============================================================================
+*.pem
+*.key
+*.cert
+secrets/
+credentials/

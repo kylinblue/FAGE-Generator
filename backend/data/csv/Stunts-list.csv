@@ -1,0 +1,47 @@
+﻿Type,Cost,Name,Basic Effect
+Combat,1 to 3,Boost,Bonus +1/SP to test next turn
+Combat,1,Rapid Reload (Ranged),Reload missile weapon free action
+Combat,1 to 3,Skirmish,Move you or target 2 yards/SP
+Combat,1,Stay Aware,TN 11 Perception test; New information or +1 to next test
+Combat,2,Disarm,"Opposed attack roll. If successful, knock weapon 1d6 + Str away"
+Combat,2,Grab (Melee),"Opposed Brawling tests. If successful, opponent can't move"
+Combat,2,Knock Prone,"Opposed attack roll. If successful, knock enemy prone"
+Combat,2,Mighty Blow,Extra 1d6 damage
+Combat,2,Pierce Armor,"Treat enemy armour as if half, rounded down"
+Combat,2,Pin (Grabbed),If Grabbed; foe becomes defenseless 
+Combat,3,Defensive Stance,Add 4 Defence until your next turn
+Combat,3,Lightning Attack,Make another attack (No extra SP)
+Combat,4,Crushing Blow,Reduce target's AR by 2 until repaired or healed
+Combat,4,Seize The Initiative,Move to the top of the turn order
+Combat,5,Lethal Blow,Extra 2d6 damage
+Social,1 to 3,Impress,Bonus +1/SP to next social test next turn
+Social,1+,Read the Situation,Discover Attitude of #SP people
+Social,2+,Crowd Appeal,"Effect an extra person/SP, if Willpower equal or less than Con"
+Social,2,Hidden Message,Convey a secret message to someone in a conversation
+Social,2,Taunt,Opposed Deception vs Self Discipline. Success; -1 to all tests
+Social,3,Spot Tells,Gain a sense of how the target tries to deceive you
+Social,3,Pay Attention,Gain a lead in an investigation
+Social,4,Sway,Shift your target's Attitude toward you
+Social,4,Inspire,Provide +1 bonus to allies until next turn
+Social,5,Manipulate,Prompt the target to commit a rash action
+Social,5,Undermine,Target suffers -2 to all non-attack tests while near you
+Exploration,1 to 3,Assist,"Help an ally, +1/SP bonus"
+Exploration,1 to 3,Wariness,Gain +1/SP to test for your next action (eg; hiding)
+Exploration,2,Efficiency,Actions or Resources halved; Gain +2 to initiative
+Exploration,2,Insight,Bluff your way through next test; Gain +1 bonus
+Exploration,3,Compensate,Ignore environmental penalties
+Exploration,3,Extra Information,Learn an additional piece of information
+Exploration,4,Cover Your Tracks,Remove evidence of your action; TN to discover = Successful Roll
+Exploration,4,Ready For Action,"If combat initiates, gain a minor action to go first"
+Exploration,5,Swiftness,Perform without using action time or incrementing challenge time
+Exploration,5,Sabotage,"Hinder your opponent, TN to avoid = Successful Roll"
+Spell,1 to 3,Powerful Casting,Increase Spellpower by +1/SP
+Spell,2,Skillful Casting,Reduce magic cost by 1 MP
+Spell,2,Mighty Spell,Increase spell damage to one target by 1d6
+Spell,3,Lasting Spell,Double duration of non-instantaneous spells
+Spell,3,Magic Shield,Add 2 Defence until your next turn
+Spell,4,Fast Casting,Cast another spell of Minor or Major casting time (No extra SP)
+Spell,4,Imposing Spell,Cannot be attacked by anyone (Melee) if failed 10+Willpower test
+Spell,4,Split Spell,"Hit 2 targets instead of 1, within 6 yards"
+Spell,5,Disrupt Magic,Power Arcana vs. Spellpower to interupt a magic effect
+Spell,5,Lethal Spell,Extra 2d6 to one target; or 1d6 to all targets

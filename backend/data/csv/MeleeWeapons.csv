@@ -1,0 +1,31 @@
+﻿Weapon,Group,Skill,Damage,Dice,Mod,Special,BonusHit,BonusDamage
+Battleaxe,Axes,Fighting,2d6,2,0,1,0,0
+Throwing Axe,Axes,Fighting,1d6 + 2,1,2,1,0,0
+Two-handed Axe,Axes,Fighting,3d6,3,0,1,0,0
+Mace,Bludgeons,Fighting,2d6,2,0,1,0,0
+Maul,Bludgeons,Fighting,1d6 + 3,1,3,1,0,0
+Two-handed Maul,Bludgeons,Fighting,2d6 + 3,2,3,1,0,0
+Fist,Brawling,Accuracy,1d3,1,0,0.5,0,0
+Gauntlet,Brawling,Accuracy,1d3 + 1,1,1,0.5,0,0
+Improvised Weapon,Brawling,Accuracy,1d6 - 1,1,-1,1,0,0
+Main Gauche,Dueling,Accuracy,1d6 + 1,1,1,1,0,0
+Rapier,Dueling,Accuracy,1d6 + 3,1,3,1,0,0
+Spiked Buckler,Dueling,Accuracy,1d6 - 1,1,-1,1,0,0
+Bastard Sword,Heavy Blades,Fighting,2d6 + 1,2,1,1,0,0
+Long Sword,Heavy Blades,Fighting,2d6,2,0,1,0,0
+Two-handed Sword,Heavy Blades,Fighting,3d6,3,0,1,0,0
+Heavy Lance,Lances,Fighting,3d6 + 1,3,1,1,0,0
+Jousting Lance,Lances,Fighting,2d6 + 1,2,1,1,0,0
+Light Lance,Lances,Fighting,1d6 + 1,1,1,1,0,0
+Dagger,Light Blades,Accuracy,1d6 + 1,1,1,1,0,0
+Short Sword,Light Blades,Accuracy,1d6 + 2,1,2,1,0,0
+Throwing Knife,Light Blades,Accuracy,1d6,1,0,1,0,0
+Glaive,Polearms,Fighting,2d6 + 1,2,1,1,0,0
+Halberd,Polearms,Fighting,2d6 + 4,2,4,1,0,0
+Military Fork,Polearms,Fighting,2d6 + 1,2,1,1,0,0
+Spear,Spears,Fighting,2d6,2,0,1,0,0
+Throwing Spear,Spears,Fighting,1d6 + 3,1,3,1,0,0
+Two-handed Spear,Spears,Fighting,2d6 + 3,2,3,1,0,0
+Club,Staves,Accuracy,1d6,1,0,1,0,0
+Morningstar,Staves,Accuracy,1d6 + 3,1,3,1,0,0
+Quarterstaff,Staves,Accuracy,1d6 + 1,1,1,1,0,0

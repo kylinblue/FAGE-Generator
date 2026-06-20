@@ -1,0 +1,35 @@
+{
+  "name": "fage-character-generator",
+  "version": "2.0.0",
+  "private": true,
+  "description": "FAGE Character Generator - Full Stack Application",
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c cyan,green \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && ..\\backend\\venv\\Scripts\\python.exe main.py",
+    "dev:frontend": "cd frontend && npm run dev",
+    "setup": "npm install && cd frontend && npm install && cd ..",
+    "setup:backend": "cd backend && python -m venv venv && venv\\Scripts\\pip install -r requirements.txt",
+    "postinstall": "echo Setup complete! Run 'npm run setup:backend' to set up Python backend environment."
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/fage-character-generator.git"
+  },
+  "keywords": [
+    "fantasy-age",
+    "fage",
+    "character-generator",
+    "tabletop-rpg",
+    "fastapi",
+    "vue"
+  ],
+  "author": "",
+  "license": "ISC"
+}

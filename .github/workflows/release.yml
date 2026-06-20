@@ -1,0 +1,88 @@
+name: Build Windows release
+
+# Triggered by pushing a version tag (e.g. `git tag v2.1.0 && git push --tags`).
+# Builds FAGE.exe on a clean Windows runner and attaches it to a GitHub Release.
+# Also available via manual dispatch for testing builds without cutting a release.
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write  # needed to create the release and upload assets
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: 'pip'
+          cache-dependency-path: backend/requirements.txt
+
+      - name: Build frontend
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run build
+
+      - name: Install backend dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r backend/requirements.txt
+          pip install pyinstaller==6.20.0
+
+      - name: Build executable
+        run: pyinstaller fage.spec --clean --noconfirm
+
+      - name: Smoke-test the bundle
+        shell: pwsh
+        run: |
+          $exe = "dist/FAGE.exe"
+          if (-not (Test-Path $exe)) { throw "FAGE.exe not produced" }
+          $size = (Get-Item $exe).Length
+          Write-Host "Bundle size: $([math]::Round($size / 1MB, 1)) MB"
+          Start-Process -FilePath $exe -PassThru | Out-Null
+          $deadline = (Get-Date).AddSeconds(60)
+          while ((Get-Date) -lt $deadline) {
+            try {
+              $r = Invoke-WebRequest -Uri "http://127.0.0.1:8765/health" -UseBasicParsing -TimeoutSec 2
+              if ($r.StatusCode -eq 200) { Write-Host "Health OK"; break }
+            } catch { Start-Sleep -Milliseconds 500 }
+          }
+          # Verify SPA + one API endpoint
+          $spa = Invoke-WebRequest -Uri "http://127.0.0.1:8765/" -UseBasicParsing
+          if ($spa.StatusCode -ne 200) { throw "SPA not served" }
+          $api = Invoke-WebRequest -Uri "http://127.0.0.1:8765/api/data/backgrounds" -UseBasicParsing
+          if ($api.StatusCode -ne 200) { throw "API not responding" }
+          Get-Process FAGE -ErrorAction SilentlyContinue | Stop-Process -Force
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: FAGE-windows
+          path: dist/FAGE.exe
+          if-no-files-found: error
+
+      - name: Attach to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/FAGE.exe
+          draft: true
+          generate_release_notes: true

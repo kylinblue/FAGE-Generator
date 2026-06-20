@@ -1,0 +1,91 @@
+# Docker ignore file for FAGE Character Generator
+# Excludes unnecessary files from Docker build context
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentation
+*.md
+!README.md
+docs/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.pyc
+backend/**/*.pyc
+backend/*.pyo
+backend/**/*.pyo
+backend/*.pyd
+backend/**/*.pyd
+backend/.Python
+backend/venv/
+backend/env/
+backend/ENV/
+backend/.env
+backend/.venv
+backend/pip-log.txt
+backend/pip-delete-this-directory.txt
+backend/.pytest_cache/
+backend/.coverage
+backend/htmlcov/
+backend/dist/
+backend/build/
+backend/*.egg-info/
+
+# Node.js / Frontend
+frontend/node_modules/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/.npmrc
+frontend/.pnpm-store/
+frontend/.cache/
+
+# Build artifacts (frontend dist is copied in Dockerfile)
+# frontend/dist/  # Don't ignore - we need this
+
+# Test files
+backend/tests/
+backend/test_*.py
+backend/**/*_test.py
+frontend/tests/
+frontend/**/*.test.js
+frontend/**/*.spec.js
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+backend/generated_pdfs/*.pdf
+backend/storage/characters/*.json
+
+# Old project files
+.old-project-files/
+
+# Claude artifacts
+.claude/
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.Spotlight-V100
+.Trashes

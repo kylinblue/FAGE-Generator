@@ -1,0 +1,24 @@
+﻿Level,Specializations,Talents,Features,Ability,Focus,Stunt,Total_Spec,Total_TalentMagic,Total_TalenNonMagic,Total_PrimaryAbility,Total_SecondaryAbility,Total_PrimaryFocus,Total_SecondaryFocus,Total_Stunt
+1,1 Degree,"Select 1: 
+Chirurgy, Linguistics or Lore 
+Select 2: 
+Any 2 Arcana Talents at Novice level for your spells","Arcane Blast, Arcane Device, Magic Training, Magic Points",-,-,No,1,2,1,0,0,0,0,0
+2,-,1 Magical,-,Primary,Primary,Yes,1,3,1,1,0,1,0,1
+3,1 Degree,-,-,Secondary,Secondary,No,2,3,1,1,1,1,1,1
+4,-,"1 Magical, 1 Non-magical",-,Primary,Primary,No,2,4,2,2,1,2,1,1
+5,1 Degree,-,-,Secondary,Secondary,No,3,4,2,2,2,2,2,1
+6,-,1 Magical,"Defense Bonus, Damage Bonus",Primary,Primary,Yes,3,5,2,3,2,3,2,2
+7,1 Degree,-,-,Secondary,Secondary,No,4,5,2,3,3,3,3,2
+8,-,"1 Magical, 1 Non-magical",Range Bonus,Primary,Primary,No,4,6,3,4,3,4,3,2
+9,1 Degree,-,-,Secondary,Secondary,No,5,6,3,4,4,4,4,2
+10,-,1 Magical,-,Primary,Primary,Yes,5,7,3,5,4,5,4,3
+11,1 Degree,-,"Defense Bonus, Damage Bonus, Focus Bonus",Secondary,Secondary,No,6,7,3,5,5,5,5,3
+12,-,"1 Magical, 1 Non-magical",-,Primary,Primary,No,6,8,4,6,5,6,5,3
+13,1 Degree,-,-,Secondary,Secondary,No,7,8,4,6,6,6,6,3
+14,-,1 Magical,-,Primary,Primary,Yes,7,9,4,7,6,7,6,4
+15,1 Degree,-,-,Secondary,Secondary,No,8,9,4,7,7,7,7,4
+16,-,"1 Magical, 1 Non-magical","Defense Bonus, Damage Bonus",Primary,Primary,No,8,10,5,8,7,8,7,4
+17,1 Degree,-,-,Secondary,Secondary,No,9,10,5,8,8,8,8,4
+18,-,1 Magical,-,Primary,Primary,Yes,9,11,5,9,8,9,8,5
+19,1 Degree,-,-,Secondary,Secondary,No,10,11,5,9,9,9,9,5
+20,-,"1 Magical, 1 Non-magical",Epic Mage,Primary,Primary,No,10,12,6,10,9,10,9,5
