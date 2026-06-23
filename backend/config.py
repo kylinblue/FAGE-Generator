@@ -12,7 +12,7 @@ class Settings(BaseSettings):
 
     # API Settings
     API_TITLE: str = "FAGE Character Generator API"
-    API_VERSION: str = "2.0.0"
+    API_VERSION: str = "0.10.1"
     API_DESCRIPTION: str = "REST API for Fantasy AGE character management"
 
     # CORS Settings
